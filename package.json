@@ -1,0 +1,21 @@
+{
+  "name": "flake-issue-104",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:withSuites && echo 'Now running without suites' && npm run test:withoutSuites",
+    "test:withSuites": "node config/run-protractor.js --suite=suite1,suite2",
+    "test:withoutSuites": "node config/run-protractor.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.4.2",
+    "protractor-flake": "github:NickTomlin/protractor-flake#restore-typescript"
+  },
+  "devDependencies": {
+    "puppeteer": "^1.12.1"
+  }
+}
